@@ -63,15 +63,15 @@ export default function Home() {
         src="https://i.gyazo.com/a018ba192e5ff222e12f89eff8f94faf.jpg"
       >
       </img>
-      <h1 class="text(lg gray-200 center) font-mono py-4">4513echo.dev</h1>
+      <h1 class="text(lg gray-100 center) font-mono py-4">4513echo.dev</h1>
       <nav>
-        <li class="list-none mx-6">
+        <ul class="mx-6">
           {links.map(({ href, name, icon }) => (
-            <ul>
+            <li>
               <Link href={href} name={name} icon={icon} />
-            </ul>
+            </li>
           ))}
-        </li>
+        </ul>
       </nav>
     </div>
   );
