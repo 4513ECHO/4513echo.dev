@@ -56,14 +56,16 @@ const links = [
 
 export default function Home() {
   return (
-    <div class="p-4 mx-auto max-w-screen-md">
+    <div class="p-4 mx-auto max-w-screen-md text(center gray-100)">
       <img
         alt="My icon"
         class="h-24 w-24 rounded-full m-auto"
-        src="https://i.gyazo.com/a018ba192e5ff222e12f89eff8f94faf.jpg"
-      >
-      </img>
-      <h1 class="text(lg gray-100 center) font-mono py-4">4513echo.dev</h1>
+        src="/icon.png"
+      />
+      <h1 class="text-lg font-mono py-4">4513echo.dev</h1>
+      <p class="p-4">
+        響です。
+      </p>
       <nav>
         <ul class="mx-6">
           {links.map(({ href, name, icon }) => (
