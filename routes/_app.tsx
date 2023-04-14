@@ -10,7 +10,7 @@ export default function App({ Component }: AppProps) {
         <meta property="og:title" content="4513echo.dev" />
         <meta property="og:url" content="https://4513echo.dev" />
         <meta property="og:description" content="響のポートフォリオです。" />
-        <meta property="og:image" content="/icon.png" />
+        <meta property="og:image" content="/icon.webp" />
       </Head>
       <div class="bg-[#8685b1] h-screen">
         <Component />

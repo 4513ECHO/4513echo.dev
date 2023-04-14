@@ -6,6 +6,7 @@
   "importMap": "./import_map.json",
   "lock": false,
   "tasks": {
+    "convert_to_webp": "deno run --allow-read=. --allow-write=. scripts/convert_to_webp.ts",
     "start": "deno run -A --watch=static/,routes/ dev.ts"
   }
 }

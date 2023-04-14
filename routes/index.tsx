@@ -60,18 +60,16 @@ export default function Home() {
       <img
         alt="My icon"
         class="h-24 w-24 rounded-full m-auto"
-        src="/icon.png"
+        src="/icon.webp"
       />
-      <h1 class="text-lg font-mono py-4">4513echo.dev</h1>
+      <h1 class="text-lg font-mono p-4">4513echo.dev</h1>
       <p class="p-4">
         響です。
       </p>
       <nav>
-        <ul class="mx-6">
+        <ul class="mx-6 space-y-2">
           {links.map(({ href, name, icon }) => (
-            <li>
-              <Link href={href} name={name} icon={icon} />
-            </li>
+            <Link href={href} name={name} icon={icon} />
           ))}
         </ul>
       </nav>
