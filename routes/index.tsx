@@ -1,5 +1,6 @@
 import { Link } from "@/components/Link.tsx";
 import * as Icons from "@/components/Icons.tsx";
+import { createUrl } from "@/scripts/gravatar.ts";
 
 const links = [
   {
@@ -54,13 +55,13 @@ const links = [
   },
 ];
 
-export default function Home() {
+export default async function Home() {
   return (
     <div class="p-4 mx-auto max-w-screen-md text(center gray-100)">
       <img
         alt="My icon"
         class="h-24 w-24 rounded-full m-auto"
-        src="/icon.webp"
+        src={await createUrl("mail@4513echo.dev")}
       />
       <h1 class="text-lg font-mono p-4">4513echo.dev</h1>
       <p class="p-4">

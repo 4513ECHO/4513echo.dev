@@ -1,7 +1,9 @@
 import type { AppProps } from "$fresh/server.ts";
 import { Head } from "$fresh/runtime.ts";
+import { createUrl } from "@/scripts/gravatar.ts";
 
-export default function App({ Component }: AppProps) {
+export default async function App({ Component }: AppProps) {
+  const iconUrl = await createUrl("mail@4513echo.dev");
   return (
     <>
       <Head>
@@ -10,8 +12,8 @@ export default function App({ Component }: AppProps) {
         <meta property="og:title" content="4513echo.dev" />
         <meta property="og:url" content="https://4513echo.dev" />
         <meta property="og:description" content="響のポートフォリオです。" />
-        <meta property="og:image" content="/icon.webp" />
-        <link rel="icon" href="/icon.png" />
+        <meta property="og:image" content={iconUrl} />
+        <link rel="icon" href={iconUrl} />
         <script
           data-goatcounter="https://4513echo.goatcounter.com/count"
           async
