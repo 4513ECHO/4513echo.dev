@@ -1,3 +1,4 @@
+import type { Handlers, PageProps } from "$fresh/server.ts";
 import { Link } from "@/components/Link.tsx";
 import * as Icons from "@/components/Icons.tsx";
 import { createUrl } from "@/scripts/gravatar.ts";
@@ -55,13 +56,20 @@ const links = [
   },
 ];
 
-export default async function Home() {
+export const handler: Handlers = {
+  async GET(_req, ctx) {
+    return ctx.render({ iconUrl: await createUrl("mail@4513echo.dev") });
+  },
+};
+
+export default function Home({ data }: PageProps<{ iconUrl: string }>) {
+  const { iconUrl } = data;
   return (
     <div class="p-4 mx-auto max-w-screen-md text(center gray-100)">
       <img
         alt="My icon"
         class="h-24 w-24 rounded-full m-auto"
-        src={await createUrl("mail@4513echo.dev")}
+        src={iconUrl}
       />
       <h1 class="text-lg font-mono p-4">4513echo.dev</h1>
       <p class="p-4">
