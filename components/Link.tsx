@@ -13,7 +13,9 @@ export function Link(props: LinkProps) {
         {typeof props.icon === "string"
           ? <img class="mx-4 w-6 h-6" src={props.icon} alt={props.name}></img>
           : <div class="mx-4 w-6 h-6">{props.icon}</div>}
-        <p class="items-center text(sm gray-100) font-mono">{props.name}</p>
+        <p class="items-center text(sm gray-100) font-mono overflow-x-auto">
+          {props.name}
+        </p>
       </a>
     </li>
   );

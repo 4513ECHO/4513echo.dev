@@ -4,7 +4,9 @@ import { createUrl } from "@/scripts/gravatar.ts";
 
 export const handler: Handlers = {
   async GET(_req, ctx) {
-    return ctx.render({ iconUrl: await createUrl("mail@4513echo.dev") });
+    return ctx.render({
+      iconUrl: await createUrl("mail@4513echo.dev", { size: 1024 }),
+    });
   },
 };
 
@@ -27,9 +29,9 @@ export default function App({ Component, data }: AppProps) {
         >
         </script>
       </Head>
-      <div class="bg-[#8685b1] h-screen">
+      <body class="bg-[#8685b1]">
         <Component />
-      </div>
+      </body>
     </>
   );
 }

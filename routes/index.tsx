@@ -11,7 +11,7 @@ const links = [
   },
   {
     href: "https://discord.com/users/807886286462517279",
-    name: "響々#4911",
+    name: "響々",
     icon: <Icons.Discord />,
   },
   {
@@ -30,6 +30,13 @@ const links = [
     icon: "https://raw.githubusercontent.com/misskey-dev/assets/main/icon.png",
   },
   {
+    href:
+      "https://iris.to/npub145l3ecjplupjgaz7h408hj92mk3yvsfg9le4r34wlavpenjsy6aq3zwnyk",
+    name: "npub145l3ecjplupjgaz7h408hj92mk3yvsfg9le4r34wlavpenjsy6aq3zwnyk",
+    icon:
+      "https://raw.githubusercontent.com/mbarulli/nostr-logo/main/PNG/nostr-icon-purple-1024x1024.png",
+  },
+  {
     href: "https://pypi.org/user/4513echo",
     name: "4513echo",
     icon: <Icons.PyPI />,
@@ -45,6 +52,11 @@ const links = [
     icon: "https://nota.github.io/press-kit/S-icon.svg",
   },
   {
+    href: "https://t2.social/4513echo",
+    name: "4513echo",
+    icon: "https://t2.social/_nuxt/logo.d3089d3d.svg",
+  },
+  {
     href: "https://twitter.com/4513echo",
     name: "@4513echo",
     icon: <Icons.Twitter />,
@@ -58,7 +70,9 @@ const links = [
 
 export const handler: Handlers = {
   async GET(_req, ctx) {
-    return ctx.render({ iconUrl: await createUrl("mail@4513echo.dev") });
+    return ctx.render({
+      iconUrl: await createUrl("mail@4513echo.dev", { size: 1024 }),
+    });
   },
 };
 
