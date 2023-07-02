@@ -25,8 +25,8 @@ const links = [
     icon: <Icons.Matrix />,
   },
   {
-    href: "https://misskey.io/@4513echo",
-    name: "@4513echo@misskey.io",
+    href: "https://mi.cbrx.io/@4513echo",
+    name: "@4513echo@mi.cbrx.io",
     icon: "https://raw.githubusercontent.com/misskey-dev/assets/main/icon.png",
   },
   {
