@@ -1,17 +1,8 @@
-import type { AppProps, Handlers } from "$fresh/server.ts";
+import type { AppProps } from "$fresh/server.ts";
 import { Head } from "$fresh/runtime.ts";
-import { createUrl } from "@/scripts/gravatar.ts";
+import { iconUrl } from "@/scripts/gravatar.ts";
 
-export const handler: Handlers = {
-  async GET(_req, ctx) {
-    return ctx.render({
-      iconUrl: await createUrl("mail@4513echo.dev", { size: 1024 }),
-    });
-  },
-};
-
-export default function App({ Component, data }: AppProps) {
-  const { iconUrl } = data as { iconUrl: string };
+export default function App({ Component }: AppProps) {
   return (
     <>
       <Head>

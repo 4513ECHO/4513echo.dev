@@ -1,7 +1,6 @@
-import type { Handlers, PageProps } from "$fresh/server.ts";
 import { Link } from "@/components/Link.tsx";
 import * as Icons from "@/components/Icons.tsx";
-import { createUrl } from "@/scripts/gravatar.ts";
+import { iconUrl } from "@/scripts/gravatar.ts";
 
 const links = [
   {
@@ -68,16 +67,7 @@ const links = [
   },
 ];
 
-export const handler: Handlers = {
-  async GET(_req, ctx) {
-    return ctx.render({
-      iconUrl: await createUrl("mail@4513echo.dev", { size: 1024 }),
-    });
-  },
-};
-
-export default function Home({ data }: PageProps<{ iconUrl: string }>) {
-  const { iconUrl } = data;
+export default function Home() {
   return (
     <div class="p-4 mx-auto max-w-screen-md text(center gray-100)">
       <img
