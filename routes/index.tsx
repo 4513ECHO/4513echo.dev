@@ -4,7 +4,7 @@ import { iconUrl } from "@/scripts/gravatar.ts";
 
 const links = [
   {
-    href: "https://staging.bsky.app/profile/4513echo.dev",
+    href: "https://bsky.app/profile/4513echo.dev",
     name: "@4513echo.dev",
     icon: <Icons.ATProtocol />,
   },
