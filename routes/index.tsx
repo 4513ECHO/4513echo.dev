@@ -56,6 +56,11 @@ const links = [
     icon: "https://nota.github.io/press-kit/S-icon.svg",
   },
   {
+    href: "https://sizu.me/4513echo",
+    name: "響",
+    icon: <Icons.Sizume />,
+  },
+  {
     href: "https://twitter.com/4513echo",
     name: "@4513echo",
     icon: <Icons.Twitter />,
