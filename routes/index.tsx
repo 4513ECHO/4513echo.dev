@@ -6,7 +6,7 @@ const links = [
   {
     href: "https://bsky.app/profile/4513echo.dev",
     name: "@4513echo.dev",
-    icon: <Icons.ATProtocol />,
+    icon: <Icons.Bluesky />,
   },
   {
     href: "https://discord.com/users/807886286462517279",
@@ -19,6 +19,11 @@ const links = [
     icon: <Icons.GitHub />,
   },
   {
+    href: "https://gravatar.com/4513echo",
+    name: "4513echo",
+    icon: <Icons.Gravatar />,
+  },
+  {
     href: "https://matrix.to/#/@4513echo:matrix.org",
     name: "@4513echo:matrix.org",
     icon: <Icons.Matrix />,
@@ -26,14 +31,14 @@ const links = [
   {
     href: "https://mi.cbrx.io/@4513echo",
     name: "@4513echo@mi.cbrx.io",
-    icon: "https://raw.githubusercontent.com/misskey-dev/assets/main/icon.png",
+    icon: "https://github.com/misskey-dev/assets/raw/2886fd4b/public/icon.png",
   },
   {
     href:
       "https://iris.to/npub145l3ecjplupjgaz7h408hj92mk3yvsfg9le4r34wlavpenjsy6aq3zwnyk",
     name: "npub145l3ecjplupjgaz7h408hj92mk3yvsfg9le4r34wlavpenjsy6aq3zwnyk",
     icon:
-      "https://raw.githubusercontent.com/mbarulli/nostr-logo/main/PNG/nostr-icon-purple-1024x1024.png",
+      "https://github.com/mbarulli/nostr-logo/raw/479913cc/SVG/nostr-icon-white-on-purple.svg",
   },
   {
     href: "https://pypi.org/user/4513echo",
@@ -49,11 +54,6 @@ const links = [
     href: "https://scrapbox.io/4513echo",
     name: "/4513echo",
     icon: "https://nota.github.io/press-kit/S-icon.svg",
-  },
-  {
-    href: "https://t2.social/4513echo",
-    name: "4513echo",
-    icon: "https://t2.social/_nuxt/logo.d3089d3d.svg",
   },
   {
     href: "https://twitter.com/4513echo",

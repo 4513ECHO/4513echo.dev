@@ -8,6 +8,7 @@ export default function App({ Component }: PageProps) {
       <Head>
         <title>4513echo.dev</title>
         <meta name="description" content="響のポートフォリオです。" />
+        <meta name="theme-color" content="#8685b1" />
         <meta property="og:title" content="4513echo.dev" />
         <meta property="og:url" content="https://4513echo.dev" />
         <meta property="og:description" content="響のポートフォリオです。" />
