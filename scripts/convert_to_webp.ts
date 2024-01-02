@@ -1,22 +1,21 @@
 import {
   ImageMagick,
-  IMagickImage,
-  initializeImageMagick,
+  initialize,
   MagickFormat,
-} from "https://deno.land/x/imagemagick_deno@0.0.19/mod.ts";
+} from "https://deno.land/x/imagemagick_deno@0.0.26/mod.ts";
 
 if (Deno.args.length !== 2) {
   console.log("convert_to_webp <image> <target>");
   Deno.exit(1);
 }
 
-await initializeImageMagick();
+await initialize();
 
 ImageMagick.read(
   await Deno.readFile(Deno.args[0]),
-  (img: IMagickImage) =>
+  (img) =>
     img.write(
-      (data: Uint8Array) => Deno.writeFile(Deno.args[1], data),
       MagickFormat.Webp,
+      (data) => Deno.writeFile(Deno.args[1], data),
     ),
 );

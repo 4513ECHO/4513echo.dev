@@ -1,8 +1,8 @@
-import type { AppProps } from "$fresh/server.ts";
+import type { PageProps } from "$fresh/server.ts";
 import { Head } from "$fresh/runtime.ts";
 import { iconUrl } from "@/scripts/gravatar.ts";
 
-export default function App({ Component }: AppProps) {
+export default function App({ Component }: PageProps) {
   return (
     <>
       <Head>
