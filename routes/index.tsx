@@ -31,7 +31,7 @@ const links = [
   {
     href: "https://mi.cbrx.io/@4513echo",
     name: "@4513echo@mi.cbrx.io",
-    icon: "https://github.com/misskey-dev/assets/raw/2886fd4b/public/icon.png",
+    icon: <Icons.Misskey />,
   },
   {
     href:
