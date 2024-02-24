@@ -1,8 +1,8 @@
-import { Link } from "@/components/Link.tsx";
+import { Link, LinkProps } from "@/components/Link.tsx";
 import * as Icons from "@/components/Icons.tsx";
 import { iconUrl } from "@/scripts/gravatar.ts";
 
-const links = [
+const links: LinkProps[] = [
   {
     href: "https://bsky.app/profile/4513echo.dev",
     name: "@4513echo.dev",
