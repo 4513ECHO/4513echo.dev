@@ -1,4 +1,4 @@
-import type { MiddlewareHandlerContext } from "$fresh/server.ts";
+import type { FreshContext } from "$fresh/server.ts";
 
 export const handler = [logger];
 
@@ -42,10 +42,7 @@ function log(
   );
 }
 
-async function logger(
-  req: Request,
-  ctx: MiddlewareHandlerContext,
-): Promise<Response> {
+async function logger(req: Request, ctx: FreshContext): Promise<Response> {
   const { search, pathname } = new URL(req.url);
   const [method, path] = [req.method, pathname + search];
   const func = pathname.startsWith("/_frsh/") ? console.debug : console.log;

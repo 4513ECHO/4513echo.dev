@@ -20,6 +20,18 @@ export default function App({ Component }: PageProps) {
           src="//gc.zgo.at/count.js"
         >
         </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "http://schema.org",
+              "@type": "WebSite",
+              "name": "4513echo.dev",
+              "url": "https://4513echo.dev",
+              "author": { "@type": "Person", "name": "響" },
+            }),
+          }}
+        />
       </Head>
       <body class="bg-[#8685b1]">
         <Component />

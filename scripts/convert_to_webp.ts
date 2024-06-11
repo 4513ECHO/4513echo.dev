@@ -3,19 +3,17 @@ import {
   initialize,
   MagickFormat,
 } from "https://deno.land/x/imagemagick_deno@0.0.26/mod.ts";
+import { ensure, is } from "@core/unknownutil";
 
-if (Deno.args.length !== 2) {
-  console.log("convert_to_webp <image> <target>");
-  Deno.exit(1);
-}
+const [src, dist] = ensure(Deno.args, is.TupleOf([is.String, is.String]));
 
 await initialize();
 
 ImageMagick.read(
-  await Deno.readFile(Deno.args[0]),
+  await Deno.readFile(src),
   (img) =>
     img.write(
       MagickFormat.Webp,
-      (data) => Deno.writeFile(Deno.args[1], data),
+      (data) => Deno.writeFile(dist, data),
     ),
 );

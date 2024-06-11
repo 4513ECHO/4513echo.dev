@@ -1,8 +1,13 @@
+import { IS_BROWSER } from "$fresh/runtime.ts";
 import { useState } from "preact/hooks";
 import { Switch } from "@headlessui/react";
 
 export default function Toggle() {
   const [enabled, setEnabled] = useState(false);
+
+  if (!IS_BROWSER) {
+    return <></>;
+  }
 
   return (
     <Switch

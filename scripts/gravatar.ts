@@ -1,5 +1,5 @@
-import { crypto } from "$std/crypto/mod.ts";
-import { encodeHex } from "$std/encoding/hex.ts";
+import { crypto } from "@std/crypto/crypto";
+import { encodeHex } from "@std/encoding/hex";
 
 const encoder = new TextEncoder();
 
