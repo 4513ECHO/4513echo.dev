@@ -40,6 +40,7 @@
     "@/": "./",
     "@core/unknownutil": "jsr:@core/unknownutil@^3.18.1",
     "@headlessui/react": "https://esm.sh/@headlessui/react@2.0.4?alias=react:preact/compat,react-dom:preact/compat,@types/react:preact/compat&external=preact&target=es2022",
+    "@icons-pack/react-simple-icons": "https://esm.sh/@icons-pack/react-simple-icons@9.5.0?alias=react:preact/compat,react-dom:preact/compat,@types/react:preact/compat&external=preact&target=es2022",
     "preact": "npm:preact@^10.22.0",
     "@preact/signals": "npm:@preact/signals@^1.2.3",
     "@std/crypto": "jsr:@std/crypto@^0.224.0",

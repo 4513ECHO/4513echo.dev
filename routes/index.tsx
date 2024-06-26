@@ -1,37 +1,61 @@
 import { Link, LinkProps } from "@/components/Link.tsx";
 import * as Icons from "@/components/Icons.tsx";
 import { iconUrl } from "@/scripts/gravatar.ts";
+import {
+  SiBluesky,
+  SiBlueskyHex,
+  SiDiscord,
+  SiDiscordHex,
+  SiGithub,
+  SiGithubHex,
+  SiGravatar,
+  SiGravatarHex,
+  SiMatrix,
+  SiMatrixHex,
+  SiMisskey,
+  SiMisskeyHex,
+  SiPypi,
+  SiPypiHex,
+  SiReddit,
+  SiRedditHex,
+  SiScrapbox,
+  SiScrapboxHex,
+  SiTwitter,
+  SiTwitterHex,
+  SiZenn,
+  SiZennHex,
+} from "@icons-pack/react-simple-icons";
 
 const links: LinkProps[] = [
   {
     href: "https://bsky.app/profile/4513echo.dev",
     name: "@4513echo.dev",
-    icon: <Icons.Bluesky />,
+    icon: <SiBluesky color={SiBlueskyHex} />,
   },
   {
     href: "https://discord.com/users/807886286462517279",
     name: "響々",
-    icon: <Icons.Discord />,
+    icon: <SiDiscord color={SiDiscordHex} />,
   },
   {
     href: "https://github.com/4513ECHO",
     name: "4513ECHO",
-    icon: <Icons.GitHub />,
+    icon: <SiGithub color={SiGithubHex} />,
   },
   {
     href: "https://gravatar.com/4513echo",
     name: "4513echo",
-    icon: <Icons.Gravatar />,
+    icon: <SiGravatar color={SiGravatarHex} />,
   },
   {
     href: "https://matrix.to/#/@4513echo:matrix.org",
     name: "@4513echo:matrix.org",
-    icon: <Icons.Matrix />,
+    icon: <SiMatrix color={SiMatrixHex} />,
   },
   {
     href: "https://mi.cbrx.io/@4513echo",
     name: "@4513echo@mi.cbrx.io",
-    icon: <Icons.Misskey />,
+    icon: <SiMisskey color={SiMisskeyHex} />,
   },
   {
     href:
@@ -43,17 +67,17 @@ const links: LinkProps[] = [
   {
     href: "https://pypi.org/user/4513echo",
     name: "4513echo",
-    icon: <Icons.PyPI />,
+    icon: <SiPypi color={SiPypiHex} />,
   },
   {
     href: "https://reddit.com/user/4513echo",
     name: "u/4513echo",
-    icon: <Icons.Reddit />,
+    icon: <SiReddit color={SiRedditHex} />,
   },
   {
     href: "https://scrapbox.io/4513echo",
     name: "/4513echo",
-    icon: "https://nota.github.io/press-kit/S-icon.svg",
+    icon: <SiScrapbox color={SiScrapboxHex} />,
   },
   {
     href: "https://sizu.me/4513echo",
@@ -63,12 +87,12 @@ const links: LinkProps[] = [
   {
     href: "https://twitter.com/4513echo",
     name: "@4513echo",
-    icon: <Icons.Twitter />,
+    icon: <SiTwitter color={SiTwitterHex} />,
   },
   {
     href: "https://zenn.dev/4513echo",
     name: "響",
-    icon: <Icons.Zenn />,
+    icon: <SiZenn color={SiZennHex} />,
   },
 ];
 
