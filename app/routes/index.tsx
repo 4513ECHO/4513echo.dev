@@ -1,61 +1,49 @@
-import { Link, LinkProps } from "@/components/Link.tsx";
-import * as Icons from "@/components/Icons.tsx";
-import { iconUrl } from "@/scripts/gravatar.ts";
+import { createRoute } from "honox/factory";
+import { LinkBox, LinkProps } from "@/components/LinkBox.tsx";
+import { Sizume, Twitter } from "@/components/Icons.tsx";
 import {
   SiBluesky,
-  SiBlueskyHex,
   SiDiscord,
-  SiDiscordHex,
   SiGithub,
-  SiGithubHex,
   SiGravatar,
-  SiGravatarHex,
   SiMatrix,
-  SiMatrixHex,
   SiMisskey,
-  SiMisskeyHex,
   SiPypi,
-  SiPypiHex,
   SiReddit,
-  SiRedditHex,
   SiScrapbox,
-  SiScrapboxHex,
-  SiTwitter,
-  SiTwitterHex,
   SiZenn,
-  SiZennHex,
-} from "@icons-pack/react-simple-icons";
+} from "react-icons/si";
 
 const links: LinkProps[] = [
   {
     href: "https://bsky.app/profile/4513echo.dev",
     name: "@4513echo.dev",
-    icon: <SiBluesky color={SiBlueskyHex} />,
+    icon: <SiBluesky size={24} color="#0285FF" />,
   },
   {
     href: "https://discord.com/users/807886286462517279",
     name: "響々",
-    icon: <SiDiscord color={SiDiscordHex} />,
+    icon: <SiDiscord size={24} color="#5865F2" />,
   },
   {
     href: "https://github.com/4513ECHO",
     name: "4513ECHO",
-    icon: <SiGithub color={SiGithubHex} />,
+    icon: <SiGithub size={24} color="#181717" />,
   },
   {
     href: "https://gravatar.com/4513echo",
     name: "4513echo",
-    icon: <SiGravatar color={SiGravatarHex} />,
+    icon: <SiGravatar size={24} color="#1E8CBE" />,
   },
   {
     href: "https://matrix.to/#/@4513echo:matrix.org",
     name: "@4513echo:matrix.org",
-    icon: <SiMatrix color={SiMatrixHex} />,
+    icon: <SiMatrix size={24} color="#000000" />,
   },
   {
     href: "https://mi.cbrx.io/@4513echo",
     name: "@4513echo@mi.cbrx.io",
-    icon: <SiMisskey color={SiMisskeyHex} />,
+    icon: <SiMisskey size={24} color="#A1CA03" />,
   },
   {
     href:
@@ -67,54 +55,55 @@ const links: LinkProps[] = [
   {
     href: "https://pypi.org/user/4513echo",
     name: "4513echo",
-    icon: <SiPypi color={SiPypiHex} />,
+    icon: <SiPypi size={24} color="#3775A9" />,
   },
   {
     href: "https://reddit.com/user/4513echo",
     name: "u/4513echo",
-    icon: <SiReddit color={SiRedditHex} />,
+    icon: <SiReddit size={24} color="#FF4500" />,
   },
   {
     href: "https://scrapbox.io/4513echo",
     name: "/4513echo",
-    icon: <SiScrapbox color={SiScrapboxHex} />,
+    icon: <SiScrapbox size={24} color="#06B632" />,
   },
   {
     href: "https://sizu.me/4513echo",
     name: "響",
-    icon: <Icons.Sizume />,
+    icon: <Sizume />,
   },
   {
     href: "https://twitter.com/4513echo",
     name: "@4513echo",
-    icon: <SiTwitter color={SiTwitterHex} />,
+    icon: <Twitter />,
   },
   {
     href: "https://zenn.dev/4513echo",
     name: "響",
-    icon: <SiZenn color={SiZennHex} />,
+    icon: <SiZenn size={24} color="#3EA8FF" />,
   },
 ];
 
-export default function Home() {
-  return (
-    <div class="p-4 mx-auto max-w-screen-md text(center gray-100)">
+export default createRoute((c) => {
+  return c.render(
+    <div className="p-4 mx-auto max-w-screen-md text-center text-gray-100">
       <img
         alt="My icon"
-        class="h-24 w-24 rounded-full m-auto"
-        src={iconUrl}
+        className="h-24 w-24 rounded-full m-auto"
+        src="https://www.gravatar.com/avatar/1179b2be2101d818dbb543537e6c3107?s=1024"
       />
-      <h1 class="text-lg font-mono p-4">4513echo.dev</h1>
-      <p class="p-4">
+      <h1 className="text-lg font-mono p-4">4513echo.dev</h1>
+      <p className="p-4">
         響です。
       </p>
       <nav>
-        <ul class="mx-6 space-y-2">
+        <ul className="mx-6 space-y-2">
           {links.map(({ href, name, icon }) => (
-            <Link href={href} name={name} icon={icon} />
+            <LinkBox key={name} href={href} name={name} icon={icon} />
           ))}
         </ul>
       </nav>
-    </div>
+    </div>,
+    { title: "4513echo.dev" },
   );
-}
+});

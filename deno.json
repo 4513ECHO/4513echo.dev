@@ -1,53 +1,55 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "preact",
     "lib": [
+      "esnext",
       "dom",
       "dom.asynciterable",
-      "deno.ns"
+      "deno.ns",
+      "deno.unstable"
     ],
-    "noUncheckedIndexedAccess": true,
-    "useUnknownInCatchVariables": true
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "jsxImportSourceTypes": "@types/react",
+    "noUncheckedIndexedAccess": true
   },
   "exclude": [
-    "**/_fresh/*",
-    "fresh.gen.ts"
+    "dist"
   ],
   "lint": {
     "rules": {
       "include": [
         "eqeqeq",
         "no-await-in-loop"
-      ],
-      "tags": [
-        "recommended",
-        "fresh"
       ]
     }
   },
   "lock": false,
+  "nodeModulesDir": "auto",
   "tasks": {
-    "check": "deno fmt --check && deno lint && deno check **/*.ts **/*.tsx",
-    "build": "deno run --allow-all dev.ts build",
-    "convert_to_webp": "deno run --allow-read=. --allow-write=. scripts/convert_to_webp.ts",
-    "preview": "deno run --allow-all main.ts",
-    "start": "deno run --allow-all --watch=static/,routes/ dev.ts",
-    "update": "deno run --allow-all --reload https://fresh.deno.dev/update ."
+    "check": "deno fmt --check && deno lint && deno check .",
+    "convert_to_webp": "deno run -R=. -W=. scripts/convert_to_webp.ts",
+    "dev": "vite",
+    "build": "vite build --mode client && vite build",
+    "preview": "deno serve -ENR=. dist/index.js"
   },
   "imports": {
-    "$fresh/": "https://deno.land/x/fresh@1.6.8/",
-    "@/": "./",
-    "@core/unknownutil": "jsr:@core/unknownutil@^3.18.1",
-    "@headlessui/react": "https://esm.sh/@headlessui/react@2.0.4?alias=react:preact/compat,react-dom:preact/compat,@types/react:preact/compat&external=preact&target=es2022",
-    "@icons-pack/react-simple-icons": "https://esm.sh/@icons-pack/react-simple-icons@9.5.0?alias=react:preact/compat,react-dom:preact/compat,@types/react:preact/compat&external=preact&target=es2022",
-    "preact": "npm:preact@^10.22.0",
-    "@preact/signals": "npm:@preact/signals@^1.2.3",
-    "@std/crypto": "jsr:@std/crypto@^0.224.0",
-    "@std/encoding": "jsr:@std/encoding@^0.224.3",
-    "@std/http": "jsr:@std/http@^0.224.4",
-    "@twind/core": "npm:@twind/core@^1.1.3",
-    "@twind/preset-autoprefix": "npm:@twind/preset-autoprefix@^1.0.7",
-    "@twind/preset-tailwind": "npm:@twind/preset-tailwind@^1.1.4"
+    "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.4",
+    "@hono/react-renderer": "npm:@hono/react-renderer@^0.3.0",
+    "@hono/vite-build": "npm:@hono/vite-build@^1.3.0",
+    "@hono/vite-dev-server": "npm:@hono/vite-dev-server@^0.18.1",
+    "@tailwindcss/vite": "npm:@tailwindcss/vite@^4.0.7",
+    "@types/react": "npm:@types/react@^19.0.10",
+    "hono": "npm:hono@^4.7.2",
+    "honox": "npm:honox@^0.1.34",
+    "react": "npm:react@^19.0.0",
+    "react-dom": "npm:react-dom@^19.0.0",
+    "react-icons": "npm:react-icons@^5.5.0",
+    "tailwindcss": "npm:tailwindcss@^4.0.7",
+    "vite": "npm:vite@^6.1.1",
+    "@/": "./app/",
+    "@core/unknownutil": "jsr:@core/unknownutil@^4.3.0",
+    "@std/crypto": "jsr:@std/crypto@^1.0.4",
+    "@std/encoding": "jsr:@std/encoding@^1.0.7",
+    "@std/http": "jsr:@std/http@^1.0.13"
   }
 }
