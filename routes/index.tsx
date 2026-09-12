@@ -1,4 +1,4 @@
-import { createRoute } from "honox/factory";
+import { define } from "../utils.ts";
 import { LinkBox, LinkProps } from "@/components/LinkBox.tsx";
 import { Sizume, Twitter } from "@/components/Icons.tsx";
 import {
@@ -84,8 +84,10 @@ const links: LinkProps[] = [
   },
 ];
 
-export default createRoute((c) => {
-  return c.render(
+export default define.page(function Home(ctx) {
+  console.log("Shared value " + ctx.state.shared);
+
+  return (
     <div className="p-4 mx-auto max-w-screen-md text-center text-gray-100">
       <img
         alt="My icon"
@@ -103,7 +105,6 @@ export default createRoute((c) => {
           ))}
         </ul>
       </nav>
-    </div>,
-    { title: "4513echo.dev" },
+    </div>
   );
 });

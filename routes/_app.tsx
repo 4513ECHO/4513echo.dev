@@ -1,19 +1,16 @@
-import { reactRenderer } from "@hono/react-renderer";
-import { Link, Script } from "honox/server";
+import { define } from "../utils.ts";
 
-export default reactRenderer(({ children, title }) => {
+export default define.page(function App({ Component }) {
   return (
     <html lang="ja">
       <head>
-        <meta charSet="utf-8" />
+        <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{title}</title>
+        <title>4513echo.dev</title>
         <link
           rel="icon"
           href="https://www.gravatar.com/avatar/1179b2be2101d818dbb543537e6c3107?s=1024"
         />
-        <Script src="/app/client.ts" async />
-        <Link rel="stylesheet" href="/app/style.css" />
         <script
           data-goatcounter="https://4513echo.goatcounter.com/count"
           async
@@ -32,7 +29,9 @@ export default reactRenderer(({ children, title }) => {
           }}
         />
       </head>
-      <body className="bg-[#8685b1]">{children}</body>
+      <body class="bg-[#8685b1]">
+        <Component />
+      </body>
     </html>
   );
 });

@@ -1,10 +1,9 @@
-// @ts-types="@types/react"
-import type { ReactNode } from "react";
+import type { ComponentChildren } from "preact";
 
 export interface LinkProps {
   href: string;
   name: string;
-  icon: ReactNode | string;
+  icon: ComponentChildren | string;
 }
 
 export function LinkBox(props: LinkProps) {
