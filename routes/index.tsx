@@ -84,9 +84,7 @@ const links: LinkProps[] = [
   },
 ];
 
-export default define.page(function Home(ctx) {
-  console.log("Shared value " + ctx.state.shared);
-
+export default define.page(function Home(_ctx) {
   return (
     <div className="p-4 mx-auto max-w-screen-md text-center text-gray-100">
       <img

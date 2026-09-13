@@ -5,18 +5,13 @@ export const app = new App<State>();
 
 app.use(staticFiles());
 
-// Pass a shared value from a middleware
-app.use(async (ctx) => {
-  ctx.state.shared = "hello";
+const loggerMiddleware = define.middleware(async (ctx) => {
+  const { method, url } = ctx.req;
+  const path = url.slice(url.indexOf("/", 8));
+  console.log(`${method} ${path}`);
   return await ctx.next();
 });
-
-// this can also be defined via a file. feel free to delete this!
-const exampleLoggerMiddleware = define.middleware((ctx) => {
-  console.log(`${ctx.req.method} ${ctx.req.url}`);
-  return ctx.next();
-});
-app.use(exampleLoggerMiddleware);
+app.use(loggerMiddleware);
 
 // Include file-system based routes here
 app.fsRoutes();
