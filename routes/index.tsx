@@ -1,16 +1,13 @@
 import { define } from "../utils.ts";
 import { LinkBox, LinkProps } from "@/components/LinkBox.tsx";
-import { Sizume, Twitter } from "@/components/Icons.tsx";
+import { Twitter } from "@/components/Icons.tsx";
 import {
   SiBluesky,
   SiDiscord,
   SiGithub,
-  SiGravatar,
   SiMatrix,
   SiMisskey,
-  SiPypi,
-  SiReddit,
-  SiScrapbox,
+  SiWikipedia,
   SiZenn,
 } from "react-icons/si";
 
@@ -31,11 +28,6 @@ const links: LinkProps[] = [
     icon: <SiGithub size={24} color="#181717" />,
   },
   {
-    href: "https://gravatar.com/4513echo",
-    name: "4513echo",
-    icon: <SiGravatar size={24} color="#1E8CBE" />,
-  },
-  {
     href: "https://matrix.to/#/@4513echo:matrix.org",
     name: "@4513echo:matrix.org",
     icon: <SiMatrix size={24} color="#000000" />,
@@ -46,36 +38,14 @@ const links: LinkProps[] = [
     icon: <SiMisskey size={24} color="#A1CA03" />,
   },
   {
-    href:
-      "https://iris.to/npub145l3ecjplupjgaz7h408hj92mk3yvsfg9le4r34wlavpenjsy6aq3zwnyk",
-    name: "npub145l3ecjplupjgaz7h408hj92mk3yvsfg9le4r34wlavpenjsy6aq3zwnyk",
-    icon:
-      "https://github.com/mbarulli/nostr-logo/raw/479913cc/SVG/nostr-icon-white-on-purple.svg",
-  },
-  {
-    href: "https://pypi.org/user/4513echo",
-    name: "4513echo",
-    icon: <SiPypi size={24} color="#3775A9" />,
-  },
-  {
-    href: "https://reddit.com/user/4513echo",
-    name: "u/4513echo",
-    icon: <SiReddit size={24} color="#FF4500" />,
-  },
-  {
-    href: "https://scrapbox.io/4513echo",
-    name: "/4513echo",
-    icon: <SiScrapbox size={24} color="#06B632" />,
-  },
-  {
-    href: "https://sizu.me/4513echo",
-    name: "響",
-    icon: <Sizume />,
-  },
-  {
     href: "https://twitter.com/4513echo",
     name: "@4513echo",
     icon: <Twitter />,
+  },
+  {
+    href: "https://ja.wikipedia.org/wiki/%E5%88%A9%E7%94%A8%E8%80%85:4513echo",
+    name: "利用者:4513echo",
+    icon: <SiWikipedia size={24} color="#000000" />,
   },
   {
     href: "https://zenn.dev/4513echo",
@@ -90,7 +60,7 @@ export default define.page(function Home(_ctx) {
       <img
         alt="My icon"
         className="h-24 w-24 rounded-full m-auto"
-        src="https://www.gravatar.com/avatar/1179b2be2101d818dbb543537e6c3107?s=1024"
+        src="/icon.jpeg"
       />
       <h1 className="text-lg font-mono p-4">4513echo.dev</h1>
       <p className="p-4">

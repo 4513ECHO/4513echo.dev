@@ -7,10 +7,7 @@ export default define.page(function App({ Component, state }) {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{state.title ?? "4513echo.dev"}</title>
-        <link
-          rel="icon"
-          href="https://www.gravatar.com/avatar/1179b2be2101d818dbb543537e6c3107?s=1024"
-        />
+        <link rel="icon" href="/icon.jpeg" />
         <script
           data-goatcounter="https://4513echo.goatcounter.com/count"
           async
