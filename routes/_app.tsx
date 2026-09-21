@@ -1,4 +1,4 @@
-import { define } from "../utils.ts";
+import { define } from "@/utils.ts";
 
 export default define.page(function App({ Component, state }) {
   return (
@@ -15,6 +15,7 @@ export default define.page(function App({ Component, state }) {
         />
         <script
           type="application/ld+json"
+          // deno-lint-ignore react-no-danger
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "http://schema.org",
@@ -26,7 +27,7 @@ export default define.page(function App({ Component, state }) {
           }}
         />
       </head>
-      <body class="bg-[#8685b1]">
+      <body class="bg-background">
         <Component />
       </body>
     </html>

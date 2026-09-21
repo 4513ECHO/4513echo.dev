@@ -1,1 +1,28 @@
 @import "tailwindcss";
+
+.squircle {
+  border-radius: calc(infinity * 1px);
+  corner-shape: squircle;
+}
+
+@theme {
+  --color-primary: oklch(0.55 0.12 295); /* #7863ae */
+  --color-primary-light: oklch(0.81 0.10 320); /* #deace9 */
+  --color-primary-dark: oklch(0.34 0.16 305); /* #4c0f77 */
+  --color-background: #8685b1;
+
+  --spacing: 1.5rem;
+}
+
+/* https://every-layout.dev/layouts/stack/ */
+@utility stack-* {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  > * {
+    margin-block: 0;
+  }
+  > * + * {
+    margin-block-start: calc(1.5rem * --value(number, --default(1)));
+  }
+}

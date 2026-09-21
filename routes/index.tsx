@@ -1,4 +1,4 @@
-import { define } from "../utils.ts";
+import { define } from "@/utils.ts";
 import { LinkBox, LinkProps } from "@/components/LinkBox.tsx";
 import { Twitter } from "@/components/Icons.tsx";
 import {
@@ -56,18 +56,18 @@ const links: LinkProps[] = [
 
 export default define.page(function Home(_ctx) {
   return (
-    <div className="p-4 mx-auto max-w-screen-md text-center text-gray-100">
+    <div className="p-1 mx-auto max-w-screen-md text-center text-gray-100">
       <img
         alt="My icon"
-        className="h-24 w-24 rounded-full m-auto"
+        className="h-4 w-4 squircle m-auto"
         src="/icon.jpeg"
       />
-      <h1 className="text-lg font-mono p-4">4513echo.dev</h1>
-      <p className="p-4">
+      <h1 className="text-lg font-mono p-1">4513echo.dev</h1>
+      <p className="p-1">
         響です。
       </p>
       <nav>
-        <ul className="mx-6 space-y-2">
+        <ul className="stack-0.5 mx-1">
           {links.map(({ href, name, icon }) => (
             <LinkBox key={name} href={href} name={name} icon={icon} />
           ))}

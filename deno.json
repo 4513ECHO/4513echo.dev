@@ -32,13 +32,16 @@
   ],
   "lint": {
     "rules": {
+      "tags": [
+        "fresh",
+        "recommended"
+      ],
       "include": [
         "eqeqeq",
         "no-await-in-loop"
       ],
-      "tags": [
-        "fresh",
-        "recommended"
+      "exclude": [
+        "fresh-handler-export"
       ]
     }
   },
