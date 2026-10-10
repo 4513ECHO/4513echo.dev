@@ -1,0 +1,10 @@
+name = "4513echo-dev"
+compatibility_date = "2026-10-10"
+main = "_fresh/server.js"
+
+[assets]
+directory = "_fresh/client"
+
+[observability.logs]
+enabled = true
+invocation_logs = true
